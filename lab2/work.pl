@@ -14,6 +14,10 @@ predicates:
     parent(B, C), son(A, C).
   granddaughter(A, B):-
     parent(B, C), daughter(A, C).
+  ancestor(A, B):-
+    parent(A, B).
+  ancestor(A, B):-
+    parent(A, C), ancestor(C, B).
 clauses:
   parent(tamara,oleg).
   parent(leonid,oleg).
