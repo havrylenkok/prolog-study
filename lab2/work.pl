@@ -45,4 +45,10 @@ predicates:
   woman(vera).
   woman(irina).
 
+  woman(somerandomwoman).
+  parent(oleg, somerandomwoman).
+  parent(irina, somerandomwoman).
+
   % get all the results as list: findall(X, parent(_,X),L).
+  list_grandsons(X, L) :- findall([X, Y], grandson(Y, X),L).
+  list_granddaughter(X, L) :- findall([X, Y], granddaughter(Y, X),L).
