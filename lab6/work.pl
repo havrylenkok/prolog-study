@@ -22,7 +22,7 @@ insert(X, [Y|T], [Y|NT]) :- X > Y, insert(X, T, NT).
 insert(X, [Y|T], [X,Y|T]) :- -X =< Y.
 insert(X, [], [X]).
 
-demo12(N1, N2) :-  even(N1, N2, E),  odd(N1, N2, O),  merge_lists(E, O, M),  insert_sort(M, R),  write(R).
+demo12(N1, N2) :-  even(N1, N2, E),  odd(N1, N2, O),  merge_lists(E, O, M), insert_sort(M, R), write(R).
 
 % 3 findall grandson & granddaughter
 
